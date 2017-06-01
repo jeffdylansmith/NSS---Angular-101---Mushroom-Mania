@@ -1,0 +1,6 @@
+<input type="text" ng-model="search">
+<form>
+  <input type="radio" value="false" ng-model="query">Poisonous <br>
+  <input type="radio" value="true" ng-model="query">Non-Poisonous <br> 
+</form>
+<p ng-repeat="shroom in shrooms | filter:search | filter: {edible:query}">{{shroom.name}}<br>{{shroom.description}}</p>
